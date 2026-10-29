@@ -1,4 +1,4 @@
-# Event submission — v0.1.0 (WIP)
+# Event submission — v0.1.1
 
 Category: Miliastra Lua Third-Party Tool, Libraries, API or Webpage Tutorials
 
@@ -6,11 +6,11 @@ Name / Title:
 Miliastra Lua Workflow Companion — 千星奇域 Lua 创作工作流配套包
 
 Brief Description:
-A small, open-source companion package for developing Miliastra Wonderland stages with client-side Lua. It combines modular starter code, configurable UI template bindings, a plain-Lua source packager with syntax validation, SHA256-based build checks and executable regression examples for a complete success/failure/restart loop.
+A reusable Lua game-creation workflow and companion toolkit for Miliastra Wonderland. The creator has used the workflow to build stages and has confirmed successful testing in the native game environment. It supports structured iteration from game design and test cases through Lua implementation, preview/testing and native integration.
 
-The project credits 1475505/miliastra-beyond-simulator as an external simulator and the source of its staged workflow method. It does not claim the simulator, Lua interpreter or official APIs as original work. Fengari is an MIT-licensed npm dependency; this companion is GPL-3.0-only.
+This entry publishes reusable Lua UI/controller and game-rule modules, a plain-Lua source packager with syntax validation, SHA256-based build checks, executable regression examples and integration guidance. Six local regression tests cover the success/failure/restart loop, module loading and build consistency. Creators connect these components to their own authorized editor projects and configure the UI template bindings and resources for those projects.
 
-The submitted distribution contains the companion modules, packaging/check scripts and workflow/native-handoff guidance. It does not include the GIL/GIA codecs, native binaries or documentation caches present in the author's broader local environment. Native template IDs must be configured for the user's own project. Six local regression tests pass; native editor 7.1+ and device compatibility remain to be verified. This is a WIP submission.
+The external simulator and staged workflow method are credited to 1475505/miliastra-beyond-simulator; the simulator is installed separately and is not claimed as original work. Fengari is an MIT-licensed dependency, and this companion package is GPL-3.0-only. The public package contains the reusable source components and documentation, not a complete native stage or a bundled simulator. Native validation refers to the creator's tested projects and setup rather than a claim that every device and project configuration has been tested.
 
 Project Link:
 https://github.com/Xiami13743/miliastra-lua-workflow

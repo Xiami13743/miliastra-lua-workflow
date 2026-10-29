@@ -1,6 +1,6 @@
 {
   "name": "miliastra-lua-workflow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Miliastra Lua workflow companion, starter modules and source packaging",
   "type": "module",

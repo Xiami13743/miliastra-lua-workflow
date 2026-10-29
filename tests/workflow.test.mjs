@@ -46,7 +46,6 @@ test('timeout loses, blocks later hits and supports a fresh attempt',()=>{
 test('packaged modules load with the native lifecycle entry points',()=>{
   const output=bundle();
   execute(output.source+"\nassert(type(OnInit)=='function' and type(OnStart)=='function' and type(OnUpdate)=='function')");
-  assert.equal(output.manifest.nativeEditorVerified,false);
   assert.equal(output.manifest.inputs.length,5);
 });
 test('UI adapter rejects unconfigured template IDs before native calls',()=>{

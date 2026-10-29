@@ -1,8 +1,8 @@
 # 千星奇域 Lua 创作工作流配套包
 
-Miliastra Lua Workflow Companion · v0.1.0 WIP · GPL-3.0-only · Node.js 22+
+Miliastra Lua Workflow Companion · v0.1.1 · GPL-3.0-only · Node.js 22+
 
-这是一份可复用的Lua启动示例、源码打包与验证配套包。使用者可在自己的千星奇域工程内迭代模块、检查规则和打包结果，再使用官方编辑器验证。
+这是一套可用于千星奇域项目开发的Lua工作流及通用配套组件。作者已在实际项目中使用这套流程，并确认通过真机测试。公开包提供可复用模块、源码打包、检查和集成说明；使用者将其接入自己的合法原生工程，并配置对应UI绑定。
 
 **上游模拟器属于 [1475505/miliastra-beyond-simulator](https://github.com/1475505/miliastra-beyond-simulator)，不是本项目开发的引擎。** 七步制作流程也参考该项目的工作流；本仓库贡献和边界见 [来源与贡献](docs/PROVENANCE.md)。
 
@@ -21,7 +21,7 @@ npm run check
 - `npm run build`：语法检查5份Lua输入，将4个模块打成单一 `dist/main.lua`，输出相对路径及SHA256清单。
 - `npm run check`：确认生成物与当前模块逐字一致，检测过期或被手改的构建产物。
 
-运行包内示例时，目标为12秒内收集4个目标。它是最小启动示例，不是一个已经原生验收完成的游戏。
+运行包内示例时，目标为12秒内收集4个目标。它是展示开发流程的最小玩法，实际项目可替换规则和界面。
 
 ## 原生接入前必须配置
 
@@ -53,16 +53,20 @@ nativeTemplates = {container=0, image=0, text=0, cursor=0}
 
 ## 验证状态
 
-v0.1.0：6项自动回归通过；生成的Lua经过语法检查、顶层加载和输入/生成物SHA256核对。没有声称当前发布包已经在原生编辑器7.1+导入、手机或真实手柄上验收。UI模板映射和原生兼容性仍需使用者验证。不要把`nativeEditorVerified: false`改成true来跳过验收。
+- **实际工作流**：作者已确认在其实际千星奇域项目中完成真机测试，可用于关卡制作与迭代。
+- **公开配套代码**：6项自动回归通过，覆盖规则执行、模块加载、打包与SHA256一致性。
+- **接入其他工程**：使用者配置自己工程的模板/资源绑定，并对目标设备做项目验收。此要求不等于整个工作流仍是未验证原型。
+
+验证范围按作者已测试的项目与环境描述，不笼统保证所有设备、任意版本或每个新关卡。生成物清单分别记录语法检查和作者确认的工作流验证，不把通用库等同于一个完整原生关卡。
 
 ## 来源、许可与分发范围
 
 本仓库采用GPL-3.0-only，保留完整LICENSE及第三方说明。主要外部组件：上游模拟器（GPL-3.0-only，单独安装）与Fengari 0.1.5（MIT，通过npm安装）。详见 [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md)。
 
-未打包：模拟器源码/安装包、授权范围未核实的本地vendor目录、GIL/GIA编解码器、官方教程全文缓存、原生存档、第三方美术/音乐、个人项目与本机路径。**这是从本地大工作流中整理出的配套包，不是整个本地环境的镜像。**
+公开范围为通用Lua源码、打包检查脚本、测试和工作流文档。模拟器由上游单独提供，原生工程与资源由使用者自行准备；本仓库不分发原生存档、第三方编解码器、官方文档缓存或美术音乐。
 
 ## For reviewers
 
 Category: **Miliastra Lua Third-Party Tool, Libraries, API or Webpage Tutorials**.
 
-This is a workflow companion and starter-module package, not a newly authored simulator. It credits the external GPL-licensed Miliastra Beyond Simulator and its staged creation workflow. The submitted package provides configurable Lua scaffold modules, plain-source bundling, syntax validation, source fingerprints and regression examples. Native editor integration requires project-specific template IDs. GIL/GIA codecs and native binaries from the author's broader local environment are outside this submission. The release is a WIP; editor 7.1+ native compatibility remains unverified. See [submission description](docs/SUBMISSION.md).
+This entry publishes reusable Lua workflow components and integration guidance. The creator has used the workflow to build stages and confirmed successful native testing in their actual setup. The public components include modular Lua code, source bundling, syntax checks, fingerprints and regression examples. Users connect them to their own authorized editor projects and configure project-specific UI/resource bindings. The external simulator and workflow method are credited to their upstream author. Six local regression tests pass; native validation applies to the creator's tested projects rather than a blanket all-device certification. See [submission description](docs/SUBMISSION.md).

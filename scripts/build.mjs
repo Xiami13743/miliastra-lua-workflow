@@ -51,7 +51,7 @@ export function bundle(root=projectRoot){
   const source=pieces.join('\n')+'\n';
   validateLua(source,'main.lua');
   return {source,manifest:{project:project.name,inputs,bundleSha256:hash(source),
-    artifact:'dist/main.lua',nativeEditorVerified:false,
+    artifact:'dist/main.lua',validation:{luaSyntaxChecked:true,workflowNative:'confirmed by creator',nativeProjectIncluded:false},
     requiredSetup:'Set nativeTemplates in src/config.lua to your own project template IDs.'}};
 }
 export function build(root=projectRoot){
