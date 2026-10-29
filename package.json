@@ -1,0 +1,19 @@
+{
+  "name": "miliastra-lua-workflow",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Miliastra Lua workflow companion, starter modules and source packaging",
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "fengari": "0.1.5"
+  }
+}

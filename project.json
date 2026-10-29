@@ -1,0 +1,22 @@
+{
+  "name": "Miliastra Lua Workflow Companion",
+  "entry": "src/main.lua",
+  "modules": [
+    {
+      "module": "kit.ui",
+      "path": "src/ui.lua"
+    },
+    {
+      "module": "kit.controller",
+      "path": "src/controller.lua"
+    },
+    {
+      "module": "game.rules",
+      "path": "src/rules.lua"
+    },
+    {
+      "module": "game.config",
+      "path": "src/config.lua"
+    }
+  ]
+}

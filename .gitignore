@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.log
+*.local.json
+*.gil
+*.gia
+*.zip
+.env*
